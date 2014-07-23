@@ -20,7 +20,7 @@ class NodeByIdHandler(BaseHandler):
         node["children"]["pagePrev"] = "/nodes/%s?children_page=%s" %(node_id, children_page_index-1) if children_page_index>0 else None
         node["children"]["pageNext"] = "/nodes/%s?children_page=%s" %(node_id, children_page_index+1) if children_page_index<children_page["pageCount"]-1 else None
 
-        self.write(node)
+        self.success(response=node)
 
 class NodeByOrigIdHandler(NodeByIdHandler):
     def get(self, node_orig_id):
@@ -35,7 +35,7 @@ class MetricByIdHandler(BaseHandler):
         metric_id = int(metric_id)
         meta_srv = self._services["meta"]
         metric = meta_srv.get_metric_by_id(metric_id)
-        self.render("metric.html", metric=metric)
+        self.success(response=metric)
 
 
 class SearchHandler(BaseHandler):
@@ -51,7 +51,8 @@ class SearchHandler(BaseHandler):
             result["pagePrev"] = "/search/?name=%s&page=%s" %(node_name, page_index-1) if page_index>0 else None
             result["pageNext"] = "/search/?name=%s&page=%s" %(node_name, page_index+1) if page_index<result["pageCount"]-1 else None
 
-        self.render("search.html", result=result)
+        self.success(response=result)
+        
 
 
 class DescendantsHandler(BaseHandler):
@@ -60,7 +61,8 @@ class DescendantsHandler(BaseHandler):
         meta_srv = self._services["meta"]
         node = meta_srv.get_node_by_id(node_id)
         node["descendantsCount"] = meta_srv.get_descendants_count(node_id)
-        self.render("descendants.html", node=node)
+        self.success(response=node)
+        
 
 class ChildrenIDsHandler(BaseHandler):
     def get(self, node_id):
@@ -74,4 +76,4 @@ class ChildrenIDsHandler(BaseHandler):
         node["children"]["pagePrev"] = "/childrenids/%s?children_page=%s" %(node_id, children_page_index-1) if children_page_index>0 else None
         node["children"]["pageNext"] = "/childrenids/%s?children_page=%s" %(node_id, children_page_index+1) if children_page_index<children_page["pageCount"]-1 else None
         
-        self.render("childrenids.html", node=node)
+        self.success(response=node)
