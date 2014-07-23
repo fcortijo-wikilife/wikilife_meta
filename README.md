@@ -1,4 +1,4 @@
-wikilife_admin
+wikilife_meta
 ==============
 
-Admin V4
+Meta API V4
