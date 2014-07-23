@@ -5,7 +5,7 @@ from wikilife_meta.rest.base_handler import BaseHandler
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.render("main.html")
+        self.render("api.html")
 
 
 class NodeByIdHandler(BaseHandler):

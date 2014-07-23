@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n7-active wf-alternategothicno1d-n4-active wf-active" lang="en-US"><head>
+
+	<title>
+	Wikilife Meta Doc - REST API
+	</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link rel="stylesheet" type="text/css" href="Twilio%20Doc%20-%20REST%20API_files/foundation.css">
+<link rel="stylesheet" type="text/css" href="Twilio%20Doc%20-%20REST%20API_files/header.css">
+<link rel="stylesheet" type="text/css" href="Twilio%20Doc%20-%20REST%20API_files/marketing.css">
+<link rel="stylesheet" type="text/css" href="Twilio%20Doc%20-%20REST%20API_files/docs.css">
+
+<style type="text/css">
+.tk-alternate-gothic-no-1-d {
+	font-family: "alternate-gothic-no-1-d", sans-serif;
+}
+</style>
+<style type="text/css">
+.tk-proxima-nova {
+	font-family: "proxima-nova", sans-serif;
+}
+</style>
+<link href="Twilio%20Doc%20-%20REST%20API_files/d_002.css"
+	rel="stylesheet">
+<link href="Twilio%20Doc%20-%20REST%20API_files/d.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="Twilio%20Doc%20-%20REST%20API_files/fonts.css">
+	<script type="text/javascript" src="Twilio%20Doc%20-%20REST%20API_files/foundation.js"></script>
+	<script type="text/javascript" src="Twilio%20Doc%20-%20REST%20API_files/marketing.js"></script>
+	<script type="text/javascript" src="Twilio%20Doc%20-%20REST%20API_files/docs.js"></script>
+
+
+</head>
+<body class="twilio">
+
+
+<div id="sub-header">
+		<ul id="sub-navigation">
+	<li><a href="http://www.twilio.com/docs" class="product-logo twilio-docs ">Twilio Docs</a></li>
+	<li><a href="http://www.twilio.com/docs/quickstart/" class="quickstart ">Quickstart</a></li>
+	<li><a href="http://www.twilio.com/docs/howto" class="docs-howto ">HowTo's</a></li>
+	<li><a href="http://www.twilio.com/docs/libraries" class="libraries ">Helper Libraries</a></li>
+	<li><a href="http://www.twilio.com/docs/api" class="docs-api selected">API docs</a></li>
+	<li><a href="http://www.twilio.com/docs/security" class="security ">Security</a></li>
+</ul>
+		<a href="http://www.twilio.com/try-twilio" class="btn btn-primary get-started">Get Started</a>
+		</div>
+<div id="wrapper">
+	<div class="content-wrap" data-swiftype-index="true">
+		<div id="markdown" class="container">
+	<div id="programming-language-container">
+		
+	</div>
+	<div class="row">
+		<div class="side_nav span3" data-swiftype-index="false">
+			<ul id="doc_menu">
+	<li id="quickstart">
+		<a href="http://www.twilio.com/docs/quickstart">Quickstart Tutorials</a>
+		</li>
+	<li id="code">
+		<a href="http://www.twilio.com/docs/howto/">HowTo's and Examples</a>
+		</li>
+	<li id="library">
+		<a href="http://www.twilio.com/docs/libraries/">Helper Libraries</a>
+		</li>
+	<li id="twiml">
+	<a href="http://www.twilio.com/docs/api/twiml/">TwiML Reference</a>
+		</li>
+	<li class="menu_selected" id="restapi">
+		<a href="http://www.twilio.com/docs/api/rest/">REST API Reference</a>
+		<ul>
+			<select style="display: none;" class="version selectBox">
+				<option value="/docs/api/2008-08-01/rest/">
+				Version 2008-08-01
+				</option>
+				<option value="/docs/api/2010-04-01/rest/" selected="selected">
+				Version 2010-04-01
+				</option>
+			</select><a tabindex="0" title="" style="display: inline-block; -moz-user-select: none;" class="selectBox version selectBox-dropdown"><span class="selectBox-label">
+				Version 2010-04-01
+				</span><span class="selectBox-arrow"></span></a>
+			<li class="menu-title">Overview</li>
+			  <ul class="menu-list">
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/request">Request Formats</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/response">Response Formats</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/test-credentials">Test Credentials</a></li>
+			  </ul>
+			<li class="menu-title">REST Resources</li>
+			  <ul class="menu-list">
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/account">Accounts</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/subaccounts">Subaccounts</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/available-phone-numbers">AvailablePhoneNumbers</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/outgoing-caller-ids">OutgoingCallerIds</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/incoming-phone-numbers">IncomingPhoneNumbers</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/applications">Applications</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/connect-apps">ConnectApps</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/authorized-connect-apps">AuthorizedConnectApps</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/call">Calls</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/making_calls">Making Calls</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/change-call-state">Modifying Live Calls</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/making-calls-sip">Making Calls via SIP</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/conference">Conferences</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/participant">Participants</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/queue">Queues</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/member">Members</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/short-codes">Short Codes</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/message">Messages</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/sending-messages">Sending SMS and MMS</a></li>
+				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/media">Media</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/recording">Recordings</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/transcription">Transcriptions</a></li>
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/notification">Notifications</a></li>
+				<li class="menu-title">SIP</li>
+					<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/domain">Domains</a></li>
+					<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/ip-access-control-list">IpAccessControlLists</a></li>
+					<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/credential-list">CredentialLists</a></li>
+				<li class="menu-title">Usage</li>
+					<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/usage-records">Records</a></li>
+					<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/usage-triggers">Triggers</a></li>
+			  </ul>
+  			<li class="menu-title">Deprecated Resources</li>
+  			  <ul class="menu-list">
+  				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/sandbox">Sandbox</a></li>
+  				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/sms">SMS Messages</a></li>
+  				<li class="subresource"><a href="http://www.twilio.com/docs/api/2010-04-01/rest/sending-sms">Sending SMS</a></li>
+  			  </ul>
+			<li class="menu-title">Additional Information</li>
+			  <ul class="menu-list">
+				<li><a href="http://www.twilio.com/docs/api/2010-04-01/rest/tips">Tips and Tricks</a></li>
+			  </ul>
+			</ul>
+		</li><li id="sip">
+		<a href="http://www.twilio.com/docs/sip">SIP Reference</a>
+		</li>
+
+	<li id="client">
+		<a href="http://www.twilio.com/docs/client/">Client Reference</a>
+		</li>
+	<li id="connect">
+		<a href="http://www.twilio.com/docs/connect">Connect Reference</a>
+	</li>
+	<li id="error">
+		<a href="http://www.twilio.com/docs/errors/">Debugging Errors </a>
+		</li>
+	<li id="security">
+		<a href="http://www.twilio.com/docs/security">Security</a>
+		</li>
+	<li id="availability">
+		<a href="http://www.twilio.com/docs/availability-reliability">Availability &amp; Reliability</a>
+	</li>
+</ul>
+
+
+		</div>
+		<div id="documentation">
+			<div id="md" class="docs  span9">
+				<h1>Twilio REST Web Service Interface</h1>
+
+<p>The Twilio REST API allows you to query meta-data about your account, phone
+numbers, calls, text messages, and recordings. You can also do some fancy
+things like initiate outbound calls and send text messages.</p>
+
+<p>Since the API is based on REST principles, it's very easy to write and test
+applications. You can use your browser to access URLs, and you can use pretty
+much any HTTP client in any programming language to interact with the API.</p>
+
+<h3 id="base-url"><a href="#base-url">Base URL</a></h3>
+
+<p>All URLs referenced in the documentation have the following base:</p>
+
+<pre class="http-request notranslate">https://api.twilio.com/2010-04-01
+</pre>
+
+<p>The Twilio REST API is served over HTTPS. To ensure data privacy, unencrypted
+HTTP is not supported.</p>
+
+<h3>Subresources</h3>
+
+<p>Twilio Accounts have the following subresources. Click on a link to read the
+API documentation for accessing or modifying each resource.</p>
+
+<h4>Calls</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/making-calls">Make a Call</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/making-calls-sip">Call a SIP-enabled endpoint</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/call">Retrieve Call Logs</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/change-call-state">Modify Live Calls</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/outgoing-caller-ids">Verify a Caller ID</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/transcription">View Call Transcriptions</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/recordings">View Call Recordings</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/conference">Manage Conferences</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/participant">View Conference Participants</a></li>
+</ul>
+
+<h4>Call Queues</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/queue">Create a Call Queue</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/queue">View Call Queues</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/member">View Queue Members</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/member">Dequeue a Member</a></li>
+</ul>
+
+<h4>Messaging</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/sending-messages">Send an SMS or MMS</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/short-codes">Send a message from a Short Code</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/message">Retrieve Message Logs</a></li>
+</ul>
+
+<h4>Phone Numbers</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/available-phone-numbers">Search for Phone Numbers</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/incoming-phone-numbers">Purchase Phone Numbers</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/incoming-phone-numbers">Update Phone Number Properties</a></li>
+</ul>
+
+<h4>Usage</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/usage-records">View Usage Data for an Account</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/usage-triggers">Set Triggers for Usage Thresholds</a></li>
+</ul>
+
+<h4>Accounts</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/account">Accounts</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/subaccounts">Subaccounts</a></li>
+</ul>
+
+<h4>Applications</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/applications">Applications</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/connect-apps">Connect Apps</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/authorized-connect-apps">Authorized Connect Apps</a></li>
+</ul>
+
+<h4>SIP</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/domain">Domains</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/ip-access-control-list">IP Access Control Lists</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/credential-list">Credential Lists</a></li>
+</ul>
+
+<h4>Miscellaneous</h4>
+
+<ul>
+<li><a href="http://www.twilio.com/docs/api/rest/notification">Error Notifications</a></li>
+<li><a href="http://www.twilio.com/docs/api/rest/sandbox">Sandbox</a></li>
+</ul>
+
+<h3 id="about-rest"><a href="#about-rest">About REST (REpresentational State Transfer)</a></h3>
+
+<p>We designed the Twilio API in a very RESTful way, so that your consumption of it is simple and straightforward. From <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Wikipedia</a>:</p>
+
+<p>REST's proponents argue that the Web's scalability and growth are a direct result of a few key design principles:</p>
+
+<ul>
+<li>Application state and functionality are divided into resources</li>
+<li>Every resource is uniquely addressable using a universal syntax for use in hypermedia links</li>
+<li><p>All resources share a uniform interface for the transfer of state between client and resource, consisting of</p>
+
+<ul>
+<li class="odd">A constrained set of well-defined operations</li>
+<li class="odd">A constrained set of content types, optionally supporting code on demand</li>
+</ul></li>
+<li><p>A protocol which is:</p>
+
+<ul>
+<li class="odd">Client-server</li>
+<li class="odd">Stateless</li>
+<li class="odd">Cacheable</li>
+<li class="odd">Layered </li>
+</ul></li>
+</ul>
+
+<p>REST's client/server separation of concerns simplifies component
+implementation, reduces the complexity of connector semantics, improves the
+effectiveness of performance tuning, and increases the scalability of pure
+server components. Layered system constraints allow intermediaries-proxies,
+gateways, and firewalls-to be introduced at various points in the communication
+without changing the interfaces between components, thus allowing them to
+assist in communication translation or improve performance via large-scale,
+shared caching.</p>
+
+<p>REST enables intermediate processing by constraining messages to be
+self-descriptive: interaction is stateless between requests, standard methods
+and media types are used to indicate semantics and exchange information, and
+responses explicitly indicate cacheability.</p>
+
+<p>If you're looking for more information about RESTful web services, the
+<a href="http://www.amazon.com/RESTful-Web-Services-Leonard-Richardson/dp/0596529260">O'Reilly RESTful Web Services book</a> is excellent.</p>
+
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body></html>
