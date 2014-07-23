@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Wikilife Admin V4</title>
+</head>
+
+<body>
+<a href="/">Home</a> | <a href="/search/">Search</a> 
+
+<h1>{{ node["name"] }} ({{ node["id"] }})</h1>
+
+<p>
+<b>Descendants count:</b> {{ node["descendantsCount"] }}
+</p>
+
+<b></b><a href="/nodes/{{ node["id"] }}">Go back</a></b>
+
+</body>
+</html>

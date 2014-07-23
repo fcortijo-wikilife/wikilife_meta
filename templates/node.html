@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Wikilife Admin V4</title>
+</head>
+
+<body>
+<a href="/">Home</a> | <a href="/search/">Search</a> 
+
+<h1>{{ node["name"] }} ({{ node["id"] }})</h1>
+
+<p><b>Orig id:</b> {{ node["origId"] }}<br/>
+<b>Other names:</b> {{ node["otherNames"] }}<br/>
+<b>Children count:</b> {{ node["children"]["itemsTotal"] }}<br/>
+<b>Children ids:</b> <a href="/childrenids/{{ node["id"] }}">click to see</a><br/>
+<b>Descendants count:</b> <a href="/descendants/{{ node["id"] }}">click to count</a></p>
+
+<p><b>Is:</b>
+{% for parent_node in node["is"] %}
+	<br/><a href="/nodes/{{ parent_node["id"] }}">{{ parent_node["name"] }} ({{ parent_node["id"] }})</a> 
+{% end %}
+</p>
+ 
+<p><b>Has:</b>
+{% for comp_node in node["has"] %}
+	<br/><a href="/nodes/{{ comp_node["id"] }}">{{ comp_node["name"] }} ({{ comp_node["id"] }})</a> 
+{% end %}
+</p>
+
+<p><b>Measured by:</b>
+{% for metric_node in node["measuredBy"] %}
+	<br/><a href="/metrics/{{ metric_node["id"] }}">{{ metric_node["name"] }} ({{ metric_node["id"] }})</a>
+{% end %}
+</p>
+
+<p><b>Measured by default:</b>
+{% for metric_node in node["measuredByDefault"] %}
+	<br/><a href="/metrics/{{ metric_node["id"] }}">{{ metric_node["name"] }} ({{ metric_node["id"] }})</a> 
+{% end %}
+</p>
+
+{% if node["children"]["itemsTotal"] > 0 %}
+<p><b>Children {{node["children"]["itemsFrom"]+1}} to {{node["children"]["itemsTo"]+1}} of {{node["children"]["itemsTotal"]}}:</b>
+{% for child_node in node["children"]["items"] %}
+	<br/><a href="/nodes/{{ child_node["id"] }}">{{ child_node["name"] }} ({{ child_node["id"] }})</a> 
+{% end %}
+</p>
+{% end %}
+
+{% if node["children"]["pageCount"] > 1 %}
+<p><b>Page 
+{% if node["children"]["pagePrev"] != None %}
+<a href="{{node["children"]["pagePrev"]}}">&lt;&lt;</a>
+{% else %}
+&lt;&lt;
+{% end %}
+ {{ node["children"]["pageIndex"]+1 }} / {{ node["children"]["pageCount"] }}  
+{% if node["children"]["pageNext"] != None %}
+<a href="{{node["children"]["pageNext"]}}">&gt;&gt;</a>
+{% else %}
+&gt;&gt;
+{% end %}
+</b></p>
+{% end %}
+<br/>
+</body>
+</html>

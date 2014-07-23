@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Wikilife Admin V4</title>
+</head>
+
+<body>
+<a href="/">Home</a> | <a href="/search/">Search</a>
+ 
+<!-- 
+metric = {
+"name": "",
+"id": 0,
+"origId": 0,
+
+if node.element_type == "NumericMetricNode":
+     dto["min"] = node.min
+     dto["max"] = node.max
+     dto["default"] = node.default
+     dto["unit"] = node.unit
+     dto["precision"] = node.precision
+
+elif node.element_type == "TextMetricNode":
+     dto["options"] = node.options
+     dto["default"] = node.default
+
+"measuring": [{"name": "", "id": 0}]
+}
+-->
+
+<h1>{{ metric["name"] }} ({{ metric["id"] }})</h1>
+
+<p><b>Orig id:</b> {{ metric["origId"] }}</p>
+
+<p>
+{% if metric["type"]=="NumericMetricNode" %}
+	<b>Type:</b> Numeric<br/>
+	<b>Min:</b> {{ metric["min"] }}<br/>
+	<b>Max:</b> {{ metric["max"] }}<br/>
+	<b>Default:</b> {{ metric["default"] }}<br/>
+	<b>Unit:</b> {{ metric["unit"] }}<br/>
+	<b>Precision:</b> {{ metric["precision"] }}<br/>
+{% elif metric["type"]=="TextMetricNode" %}
+	<b>Type:</b> Text<br/>
+	<b>Options:</b> {{ ", ".join(metric["options"].split(",")) }}<br/>
+	<b>Default:</b> {{ metric["options"].split(",")[int(metric["default"])] }}<br/>
+{% else %}
+	<b>WARNING: Unknown metric type</b>
+{% end %}
+</p>
+
+<p><b>Measuring (limit 100):</b>
+{% for node in metric["measuring"] %}
+	<a href="/nodes/{{ node["id"] }}">{{ node["name"] }} ({{ node["id"] }})</a>, 
+{% end %}
+</p>
+
+</body>
+</html>

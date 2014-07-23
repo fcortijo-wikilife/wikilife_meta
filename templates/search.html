@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Wikilife Admin V4</title>
+</head>
+
+<body>
+<a href="/">Home</a> | <a href="/search/">Search</a> 
+
+<h1>Search 
+{% if result != None %}
+"{{result["name"]}}"
+{% end %}
+</h1>
+
+<p>
+	<form method="GET" action="/search/">
+		<input type="text" id="name" name="name"/>
+		<input type="submit"/>
+	</form>
+</p>
+
+{% if result != None %}
+
+{% if result["itemsTotal"] > 0 %}
+
+<p><b>Showing results {{result["itemsFrom"]+1}} to {{result["itemsTo"]+1}} of {{result["itemsTotal"]}}</b></p>
+
+<p>
+{% for node in result["items"] %}
+	<br/><a href="/nodes/{{ node["id"] }}">{{ node["name"] }} ({{ node["id"] }})</a> 
+{% end %}
+</p>
+
+{% if result["pageCount"] > 1 %}
+<p><b>Page 
+{% if result["pagePrev"] != None %}
+<a href="{{result["pagePrev"]}}">&lt;&lt;</a>
+{% else %}
+&lt;&lt;
+{% end %}
+ {{ result["pageIndex"]+1 }} / {{ result["pageCount"] }}  
+{% if result["pageNext"] != None %}
+<a href="{{result["pageNext"]}}">&gt;&gt;</a>
+{% else %}
+&gt;&gt;
+{% end %}
+
+{% end %}
+</b></p>
+
+{% else %}
+<b>No results</b>
+{% end %}
+
+<br/>
+{% end %}
+</body>
+</html>

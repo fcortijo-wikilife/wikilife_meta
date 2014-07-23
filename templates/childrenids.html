@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Wikilife Admin V4</title>
+</head>
+
+<body>
+<a href="/">Home</a> | <a href="/search/">Search</a> 
+
+<h1>{{ node["name"] }} ({{ node["id"] }})</h1>
+
+<p><b>Orig id:</b> {{ node["origId"] }}<br/>
+<b>Children count:</b> {{ node["children"]["itemsTotal"] }}<br/>
+
+{% if node["children"]["itemsTotal"] > 0 %}
+<p><b>Children {{node["children"]["itemsFrom"]+1}} to {{node["children"]["itemsTo"]+1}} of {{node["children"]["itemsTotal"]}}:</b>
+<br/>
+{% for child_node in node["children"]["items"] %}
+	{{ child_node["id"] }}, 
+{% end %}
+</p>
+{% end %}
+
+{% if node["children"]["pageCount"] > 1 %}
+<p><b>Page 
+{% if node["children"]["pagePrev"] != None %}
+<a href="{{node["children"]["pagePrev"]}}">&lt;&lt;</a>
+{% else %}
+&lt;&lt;
+{% end %}
+ {{ node["children"]["pageIndex"]+1 }} / {{ node["children"]["pageCount"] }}  
+{% if node["children"]["pageNext"] != None %}
+<a href="{{node["children"]["pageNext"]}}">&gt;&gt;</a>
+{% else %}
+&gt;&gt;
+{% end %}
+</b></p>
+{% end %}
+<br/>
+</body>
+</html>
