@@ -13,7 +13,7 @@ DEFAULT_LIBS_PATH = '..'
 
 
 def start_instance(settings):
-    from wikilife_admin.app import setup_app
+    from wikilife_meta.app import setup_app
     
     http_server = tornado.httpserver.HTTPServer(
         setup_app(settings)
