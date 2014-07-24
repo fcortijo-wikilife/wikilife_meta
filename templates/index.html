@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Wikilife | Meta API</title>
+
+  <!-- Metatags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=1024, initial-scale=1.0">
+
+  <!-- Iconos -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico"/>
+
+  <!-- Styles -->
+  <link href="http://datadonors.org/static/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="http://datadonors.org//static/css/footer.css" rel="stylesheet" />
+  <link href="http://datadonors.org//static/css/data.css" rel="stylesheet" />
+<style type="text/css">
+.http-request {
+    background-color: #eee;
+    border: medium none;
+    font-family: Consolas,Monaco,monospace;
+    font-size: 16px;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: block;
+    font-size: 12.025px;
+    line-height: 18px;
+    margin: 0 0 9px;
+    padding: 8.5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <!--header-->
+  <!--/header-->
+
+  <div class="full_container plain_text learn-more">
+
+    <div class="centered_container">
+
+      <h2> Wikilife Meta REST Web Service Interface </h2>
+
+<p>The Wikilife Meta REST API allows you to query meta-data about life style variables.</p>
+
+<p>Since the API is based on REST principles, it's very easy to write and test
+applications. You can use your browser to access URLs, and you can use pretty
+much any HTTP client in any programming language to interact with the API.</p>
+
+<h3 id="base-url"><a href="#base-url">Base URL</a></h3>
+
+<p>All URLs referenced in the documentation have the following base:</p>
+
+<pre class="http-request notranslate">https://meta.wikilife.org/
+</pre>
+
+<p>The Wikilife Meta REST API is open and free to be used for anyone.</p>
+
+<h3>Resources</h3>
+
+<p>Read the API documentation for accessing or modifying each resource.</p>
+		<ul class="list_variables">
+		<li class="variables_card">
+			<h3> "Level of Education" </h3>
+			<div class="detail">
+			<span> "Source:" </span> " manual input, Linkedin" <br/>
+			<span> "Type:" </span> " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors"  <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/social/education/global/">JSON</a><br/>
+			</div>
+		</li>
+		
+		<li class="variables_card">
+			<h3> "Work Experience" </h3>
+			<div class="detail">
+			<span> "Source:" </span> " manual input, Linkedin" <br/>
+			<span> "Type:" </span>  " count, sum and average"<br/>
+			<span> "Time:" </span>  "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" s <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/social/work/global/">JSON</a><br/>
+			</div>
+		</li>
+        <li class="variables_card">
+			<h3> "Virtual life Reach" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Twitter, Facebook, LinkedIn, Foursquare, Gmail<br/>
+			<span> "Type:" </span>  " count, sum and percentage"<br/>
+			<span> "Time:" </span>  "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/social/reach/global/">JSON</a><br/>
+			</div>
+		</li>
+		<li class="variables_card">
+			<h3> "Virtual life Sharing" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Twitter, Facebook<br/>
+			<span> "Type:" </span>  " average"  <br/>
+			<span> "Time:" </span>  "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/social/sharing/global/">JSON</a><br/>
+			</div>
+		</li>
+		<li class="variables_card">
+			<h3> "Steps" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Runkepper, Nike+, Fitbit, Moves<br/>
+			<span> "Type:" </span> " average from last Sunday and daily"<br/>
+			<span> "Time:" </span>  " since" {{last_sunday}}<br/>
+			<span> "Population:" </span>  registered Wikilife users (Twitter Crawler) <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/physical/exercise/steps/distribution/global/">JSON</a><br/>
+			</div>
+		</li>    
+
+		<li class="variables_card">
+			<h3> "Hours of exercise" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Runkepper, Nike+, Fitbit<br/>
+			<span> "Type:" </span> " average from last Sunday and daily"<br/>
+			<span> "Time:" </span>   " since" {{last_sunday}}<br/>
+			<span> "Population:" </span>  "  registered Wikilife users (Twitter Crawler)" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/physical/exercise/hours/distribution/global/">JSON</a><br/>
+			</div>
+		</li>
+
+		<li class="variables_card">
+			<h3> "Distance" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Runkepper, Nike+, Fitbit<br/>
+			<span> "Type:" </span>  " average from last Sunday and daily"<br/>
+			<span> "Time:" </span>   " since" {{last_sunday}}<br/>
+			<span> "Population:" </span>   "  registered Wikilife users (Twitter Crawler)"<br/>
+			<span> "Format:" </span>  <a target="_blank" href="/physical/exercise/miles/distribution/global/">JSON</a><br/>
+			</div>
+		</li>
+
+		<li class="variables_card">
+			<h3> "Nutrients" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Fatsecret, Withings, Fitbit<br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span>    " since" {{last_sunday}}<br/>
+			<span> "Population:" </span>   "  registered Datadonors"  <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/nutrition/nutrients/global/distribution/">JSON</a><br/>
+			</div>
+		</li> 
+		
+		<li class="variables_card">
+			<h3> "Conditions" </h3>
+			<div class="detail">
+			<span> "Source:" </span>   " manual input" <br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/health/cronical_conditions/global/all/">JSON</a><br/>
+			</div>
+		</li>
+
+		<li class="variables_card">
+			<h3> "Complaints" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  " manual input" <br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/health/complaints/global/all/">JSON</a><br/>
+			</div>
+		</li>
+		
+		<li class="variables_card">
+			<h3> "Blood Type" </h3>
+			<div class="detail">
+			<span> "Source:" </span>   " manual input" <br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span>  "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/health/blood_type/global/distribution/">JSON</a><br/>
+			</div>
+		</li>
+
+		<li class="variables_card">
+			<h3> "Emotions" </h3>
+			<div class="detail">
+			<span> "Source:" </span>   " manual input" <br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/health/emotions/global/all/">JSON</a><br/>
+			</div>
+		</li>
+		
+		<li class="variables_card">
+			<h3> "Sleep" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  Runkeeper, Withings, Fitbit<br/>
+			<span> "Type:" </span> " average from last Sunday and daily"<br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors" <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/health/sleep/global/distribution/">JSON</a><br/>
+			</div>
+		</li>
+		
+		<li class="variables_card">
+			<h3> "Health Risks" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  23 and Me<br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors"  <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/genomics/risks/global/">JSON</a><br/>
+			</div>
+		</li>
+
+		<li class="variables_card">
+			<h3> "Drugs Response" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  23 and Me<br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span>  "  since 2014-01-01" <br/>
+			<span> "Population:" </span> "  registered Datadonors"  <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/genomics/drugs/global/">JSON</a><br/>
+			</div>
+		</li>
+		
+		<li class="variables_card">
+			<h3> "Traits" </h3>
+			<div class="detail">
+			<span> "Source:" </span>  23 and Me<br/>
+			<span> "Type:" </span>   " percentage" <br/>
+			<span> "Time:" </span> "  since 2014-01-01" <br/>
+			<span> "Population:" </span>   "  registered Datadonors"  <br/>
+			<span> "Format:" </span>  <a target="_blank" href="/genomics/traits/global/">JSON</a><br/>
+			</div>
+		</li>        
+        </ul>
+         <!-- h3>Physical Data</h3>
+        </ul>
+         <h3>Nutrition Data</h3>
+        <ul>
+        <li><a>Nutrients</a></li>
+        </ul>
+        <h3>Health Data</h3>
+        <ul>
+        <li><a>Complaints</a></li>
+        <li><a>Conditions</a></li>
+        <li><a>Blood type</a></li>
+        <li><a>Mood</a></li>
+        <li><a>Sleep</a></li>
+        </ul>   
+ 
+         <h3>Genetic Data</h3>
+        <ul>
+        <li><a>Risks</a></li>
+        <li><a>Trails</a></li>
+        <li><a>Drug response</a></li>
+
+        </ul --> 
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
