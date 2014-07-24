@@ -14,6 +14,10 @@
   
   <link href="http://datadonors.org/static/css/main.css" rel="stylesheet" type="text/css" />
   <link href="http://datadonors.org/static/css/footer.css" rel="stylesheet" />
+  	<script type="text/javascript" src="/static/js/shCore.js"></script>
+	<script type="text/javascript" src="/static/js/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="/static/css/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
 <style type="text/css">
 .learn-more {
     background-color: #e46666;
@@ -161,7 +165,7 @@ much any HTTP client in any programming language to interact with the API.</p>
 <h3 id="base-url">Pagination</h3>
 
 <p>All API results referenced in the documentation are paginated.</p>
-<pre class="http-request notranslate">
+<pre class="brush: js;">
 "pageIndex": 0,
 "itemsCount": 25,
 "pageSize": 25,
@@ -185,7 +189,7 @@ much any HTTP client in any programming language to interact with the API.</p>
 
 <p>Example</p>
 <p>http://meta.wikilife.org/search/?name=cancer</p>
-<pre class="http-request notranslate short">
+<pre class="http-request notranslate short brush: js;">
 
 {
 
@@ -196,16 +200,7 @@ much any HTTP client in any programming language to interact with the API.</p>
     "pageCount": 2,
     "itemsTotal": 30,
     "items": [
-        {
-            "name": "Anal cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 257753,
-            "otherNames": "C21.0,Cancer of the anus,Malignant neoplasm of anus,Malignant Neoplasm Anus Unspecified",
-            "type": "MetaNode",
-            "id": 33389
-        },
+
         {
             "name": "Bladder cancer",
             "parentIds": [
@@ -266,16 +261,7 @@ much any HTTP client in any programming language to interact with the API.</p>
             "type": "MetaNode",
             "id": 33455
         },
-        {
-            "name": "Colon cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 257741,
-            "otherNames": "C18.9,Cancer of colon,Malignant neoplasm of colon,Large intestine cancer. Cancer of large intestine,Malignant Neoplasm Colon Unspecified",
-            "type": "MetaNode",
-            "id": 33467
-        },
+
         {
             "name": "Esophageal cancer",
             "parentIds": [
@@ -464,7 +450,7 @@ much any HTTP client in any programming language to interact with the API.</p>
 
 <p>Example</p>
 <p>http://meta.wikilife.org/nodes/6</p>
-<pre class="http-request notranslate short">
+<pre class="http-request notranslate short brush: js;">
 
 {
 
@@ -907,9 +893,17 @@ much any HTTP client in any programming language to interact with the API.</p>
 
 <p>Example</p>
 <p>http://meta.wikilife.org/metrics/394</p>
-<pre class="http-request notranslate short">
+<pre class="http-request notranslate short brush: js;">
 {
-
+    "name": "Calories Burned-Value Node",
+    "min": 1,
+    "default": 300,
+    "max": 10000,
+    "origId": 406728,
+    "precision": 0,
+    "type": "NumericMetricNode",
+    "id": 394,
+    "unit": "cal"
     "measuring": [
         {
             "otherNames": "1 leg calf raise, Legs",
@@ -1612,15 +1606,7 @@ much any HTTP client in any programming language to interact with the API.</p>
             "name": "Decline Chest Press"
         }
     ],
-    "name": "Calories Burned-Value Node",
-    "min": 1,
-    "default": 300,
-    "max": 10000,
-    "origId": 406728,
-    "precision": 0,
-    "type": "NumericMetricNode",
-    "id": 394,
-    "unit": "cal"
+
 
 }
 </pre>
