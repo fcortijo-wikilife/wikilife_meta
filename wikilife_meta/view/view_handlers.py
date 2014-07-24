@@ -14,7 +14,7 @@ class NodeByIdHandler(BaseHandler):
         node_id = int(node_id)
         meta_srv = self._services["meta"]
         node = meta_srv.get_node_full(node_id)
-
+        node["descendantsCount"] = meta_srv.get_descendants_count(node_id)
         children_page = meta_srv.get_node_children(node_id, children_page_index, 50)
         node["children"] = children_page
         node["children"]["pagePrev"] = "/nodes/%s?children_page=%s" %(node_id, children_page_index-1) if children_page_index>0 else None
