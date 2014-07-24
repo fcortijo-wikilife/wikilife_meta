@@ -9,14 +9,56 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=1024, initial-scale=1.0">
 
-  <!-- Iconos -->
-  <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico"/>
-
   <!-- Styles -->
+
+  
   <link href="http://datadonors.org/static/css/main.css" rel="stylesheet" type="text/css" />
-  <link href="http://datadonors.org//static/css/footer.css" rel="stylesheet" />
-  <link href="http://datadonors.org//static/css/data.css" rel="stylesheet" />
+  <link href="http://datadonors.org/static/css/footer.css" rel="stylesheet" />
+  <link href="http://datadonors.org/static/css/data.css" rel="stylesheet" />
 <style type="text/css">
+
+@font-face {
+    font-family: "Gotham-Ultra";
+    src: url('/static/css/fonts/gotham_ultra.eot');
+    src: url('/static/css/fonts/gotham_ultra.eot?#iefix') format('embedded-opentype'),
+    	 url('/static/css/fonts/gotham_ultra.svg#Gotham-Ultra') format('svg'),
+    	 url('/static/css/fonts/gotham_ultra.woff') format('woff'),
+    	 url('/static/css/fonts/gotham_ultra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-bold';
+    src: url('/static/css/fonts/gotham-bold.eot');
+    src: url('/static/css/fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+         url('/static/css/fonts/gotham-bold.woff') format('woff'),
+         url('/static/css/fonts/gotham-bold.ttf') format('truetype'),
+         url('/static/css/fonts/gotham-bold.svg#gotham-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Omnes-Semibold';
+    src: url('/static/css/fonts/Omnes-Semibold.eot');
+    src: url('/static/css/fonts/Omnes-Semibold.eot?#iefix') format('embedded-opentype'),
+         url('/static/css/fonts/Omnes-Semibold.woff') format('woff'),
+         url('/static/css/fonts/Omnes-Semibold.ttf') format('truetype'),
+         url('/static/css/fonts/Omnes-Semibold.svg#Omnes-Semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'Omnes-bold';
+	src: url('/static/css/fonts/omnes_bold.eot');
+	src: local('‚ò∫'), url('/static/css/fonts/omnes_bold.woff') format('woff'), url('/static/css/fonts/omnes_bold.ttf') format('truetype'), url('/static/css/fonts/omnes_bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .http-request {
     background-color: #eee;
     border: medium none;
@@ -41,6 +83,26 @@ pre {
     word-wrap: break-word;
     color: #333;
 }
+
+div.learn-more h3 {
+    font-size: 21px !important;
+    margin-bottom: 15px !important;
+    margin-left: 0px !important;
+    margin-top: 15px !important;
+}
+h3{
+border-bottom: 1px dotted;
+}
+
+#res{
+    font-size: 21px !important;
+    margin-bottom: 15px !important;
+    margin-left: 0px !important;
+    margin-top: 15px !important;
+        color: #fff;
+    font-family: 'Omnes-Semibold';
+    font-size: 20px;
+}
 </style>
 
 </head>
@@ -56,7 +118,8 @@ pre {
 
     <div class="centered_container">
 
-      <h2> Wikilife Meta REST Web Service Interface </h2>
+      <h2> Wikilife Meta API</h2> 
+      <h3>REST Web Service Interface </h3>
 
 <p>The Wikilife Meta REST API allows you to query meta-data about life style variables.</p>
 
@@ -64,88 +127,24 @@ pre {
 applications. You can use your browser to access URLs, and you can use pretty
 much any HTTP client in any programming language to interact with the API.</p>
 
-<h3 id="base-url"><a href="#base-url">Base URL</a></h3>
+<h3 id="base-url">Base URL</h3>
 
 <p>All URLs referenced in the documentation have the following base:</p>
 
-<pre class="http-request notranslate">https://meta.wikilife.org/
+<pre class="http-request notranslate">http://meta.wikilife.org/
 </pre>
 
 <p>The Wikilife Meta REST API is open and free to be used for anyone.</p>
 
 <h3>Resources</h3>
 
-<p>Read the API documentation for accessing or modifying each resource.</p>
-		<ul class="list_variables">
-	
-		
-		<li class="variables_card">
-			<h3> "Sleep" </h3>
-			<div class="detail">
-			<span> "Source:" </span>  Runkeeper, Withings, Fitbit<br/>
-			<span> "Type:" </span> " average from last Sunday and daily"<br/>
-			<span> "Time:" </span> "  since 2014-01-01" <br/>
-			<span> "Population:" </span> "  registered Datadonors" <br/>
-			<span> "Format:" </span>  <a target="_blank" href="/health/sleep/global/distribution/">JSON</a><br/>
-			</div>
-		</li>
-		
-		<li class="variables_card">
-			<h3> "Health Risks" </h3>
-			<div class="detail">
-			<span> "Source:" </span>  23 and Me<br/>
-			<span> "Type:" </span>   " percentage" <br/>
-			<span> "Time:" </span> "  since 2014-01-01" <br/>
-			<span> "Population:" </span> "  registered Datadonors"  <br/>
-			<span> "Format:" </span>  <a target="_blank" href="/genomics/risks/global/">JSON</a><br/>
-			</div>
-		</li>
+<p>Read the API documentation for accessing each resource.</p>
 
-		<li class="variables_card">
-			<h3> "Drugs Response" </h3>
-			<div class="detail">
-			<span> "Source:" </span>  23 and Me<br/>
-			<span> "Type:" </span>   " percentage" <br/>
-			<span> "Time:" </span>  "  since 2014-01-01" <br/>
-			<span> "Population:" </span> "  registered Datadonors"  <br/>
-			<span> "Format:" </span>  <a target="_blank" href="/genomics/drugs/global/">JSON</a><br/>
-			</div>
-		</li>
-		
-		<li class="variables_card">
-			<h3> "Traits" </h3>
-			<div class="detail">
-			<span> "Source:" </span>  23 and Me<br/>
-			<span> "Type:" </span>   " percentage" <br/>
-			<span> "Time:" </span> "  since 2014-01-01" <br/>
-			<span> "Population:" </span>   "  registered Datadonors"  <br/>
-			<span> "Format:" </span>  <a target="_blank" href="/genomics/traits/global/">JSON</a><br/>
-			</div>
-		</li>        
-        </ul>
-         <!-- h3>Physical Data</h3>
-        </ul>
-         <h3>Nutrition Data</h3>
-        <ul>
-        <li><a>Nutrients</a></li>
-        </ul>
-        <h3>Health Data</h3>
-        <ul>
-        <li><a>Complaints</a></li>
-        <li><a>Conditions</a></li>
-        <li><a>Blood type</a></li>
-        <li><a>Mood</a></li>
-        <li><a>Sleep</a></li>
-        </ul>   
- 
-         <h3>Genetic Data</h3>
-        <ul>
-        <li><a>Risks</a></li>
-        <li><a>Trails</a></li>
-        <li><a>Drug response</a></li>
+<div id="res"> Node by ID</div>
+<p>Get the information for a given nodeId</p>
 
-        </ul --> 
-    </div>
+<pre class="http-request notranslate">http://meta.wikilife.org/nodes/{nodeID}
+</pre>
   </div>
 
 </div>
