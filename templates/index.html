@@ -14,9 +14,23 @@
   
   <link href="http://datadonors.org/static/css/main.css" rel="stylesheet" type="text/css" />
   <link href="http://datadonors.org/static/css/footer.css" rel="stylesheet" />
-  <link href="http://datadonors.org/static/css/data.css" rel="stylesheet" />
 <style type="text/css">
+.learn-more {
+    background-color: #e46666;
+    position: relative;
+}
 
+ol, ul {
+    list-style: disc;
+}
+.plain_text .centered_container ul li {
+    color: #fff;
+    font-family: 'Omnes-Semibold';
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
 @font-face {
     font-family: "Gotham-Ultra";
     src: url('/static/css/fonts/gotham_ultra.eot');
@@ -1610,6 +1624,49 @@ much any HTTP client in any programming language to interact with the API.</p>
 
 }
 </pre>
+
+<h3 >About REST (REpresentational State Transfer)</h3>
+
+<p>We designed the Wikilfie Meta API in a very RESTful way, so that your consumption of it is simple and straightforward. From <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Wikipedia</a>:</p>
+
+<p>REST's proponents argue that the Web's scalability and growth are a direct result of a few key design principles:</p>
+
+<ul>
+<li>Application state and functionality are divided into resources</li>
+<li>Every resource is uniquely addressable using a universal syntax for use in hypermedia links</li>
+<li>All resources share a uniform interface for the transfer of state between client and resource, consisting of
+
+<ul>
+<li class="odd">A constrained set of well-defined operations</li>
+<li class="odd">A constrained set of content types, optionally supporting code on demand</li>
+</ul></li>
+<li>A protocol which is:
+
+<ul>
+<li class="odd">Client-server</li>
+<li class="odd">Stateless</li>
+<li class="odd">Cacheable</li>
+<li class="odd">Layered </li>
+</ul></li>
+</ul>
+
+<p>REST's client/server separation of concerns simplifies component
+implementation, reduces the complexity of connector semantics, improves the
+effectiveness of performance tuning, and increases the scalability of pure
+server components. Layered system constraints allow intermediaries-proxies,
+gateways, and firewalls-to be introduced at various points in the communication
+without changing the interfaces between components, thus allowing them to
+assist in communication translation or improve performance via large-scale,
+shared caching.</p>
+
+<p>REST enables intermediate processing by constraining messages to be
+self-descriptive: interaction is stateless between requests, standard methods
+and media types are used to indicate semantics and exchange information, and
+responses explicitly indicate cacheability.</p>
+
+<p>If you're looking for more information about RESTful web services, the
+<a href="http://www.amazon.com/RESTful-Web-Services-Leonard-Richardson/dp/0596529260">O'Reilly RESTful Web Services book</a> is excellent.</p>
+
   </div>
 
 </div>
