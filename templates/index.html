@@ -168,6 +168,54 @@ border-bottom: 1px dotted;
 applications. You can use your browser to access URLs, and you can use pretty
 much any HTTP client in any programming language to interact with the API.</p>
 
+
+<h3>WikiGraph Concept</h3>
+<p>The wikilife Graph of meta data is a digraph or directed graph (more info about digraphs here). 
+We use this data structure since it fix in the best way with the relationship between nodes.</p>
+
+<ul>
+<li>Everything is a node that can be quantified.</li>
+<li>Object-like oriented model using multi hierarchy and aggregation concepts.</li>
+</ul>
+<p>Node</p>
+<p>Each node has the information necessary to get a full description of it, using the relation with other nodes and its attributes.</p>
+<p>Node attributes:</p>
+<ul>
+	<li>Mandatory attributes:</li>
+	<ul><li>id, node identifier.</li>
+	<li>name, main name of a node.</li>
+	<li>metrics, list with at least one metric object.</li>
+	</ul>
+	<li>Optional attributes:</li>
+	<ul><li>otherNames, list of synonyms for that node.</li>
+	<li>is, list of node identifier.</li>
+	<li>has, list of has relation objects.</li>
+	<li>extras, extra information for that node.</li>
+	</ul>
+</ul>
+
+
+<p>Relation</p>
+<p>There is 1 type of inheritance relation:</p>
+<p>"is", define a strong inheritance relation.</p>
+<p>There is 1 type of aggregation relation:</p>
+<p>"has", define a strong aggregation relation.</p>
+
+
+<p>"HAS" Relation (aggregation):</p>
+<p>Use a "has relation" object to define if a node is part of another node.</p>
+<p>Example</p>
+<p>Apple Juice "has" Apple.</p>
+
+<p>"IS" Relation (aggregation):</p>
+<p>Use "is" to define if a node is a child of another node.</p>
+<p>Example</p>
+<p>Apple "is a" Fruit.</p>
+
+<p>Metric</p>
+<p>Nodes defines its own way to be quantified using Metrics Objects, it is possible to use more 
+
+than one metric per node.</p>
 <h3 id="base-url">Base URL</h3>
 
 <p>All URLs referenced in the documentation have the following base:</p>
