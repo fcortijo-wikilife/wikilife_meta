@@ -11,7 +11,8 @@
 
 <!-- Styles -->
 
-
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
 <link href="http://datadonors.org/static/css/main.css" rel="stylesheet"
 	type="text/css" />
 
@@ -19,9 +20,10 @@
 <script type="text/javascript" src="/static/js/shBrushJScript.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="/static/css/shCoreDefault.css" />
-<script type="text/javascript">
+<!-- script type="text/javascript">
 	SyntaxHighlighter.all();
-</script>
+</script-->
+<script>hljs.initHighlightingOnLoad();</script>
 <style type="text/css">
 .learn-more {
 	background-color: #e46666;
@@ -281,7 +283,7 @@ h3 {
 
 				<p>Example</p>
 				<p>http://meta.wikilife.org/search/?name=cancer</p>
-				<pre class="brush: js;">
+				<pre><code class="json">
 
 {
 
@@ -364,6 +366,7 @@ h3 {
 
 
 }
+</code>
 </pre>
 
 
