@@ -143,6 +143,7 @@ border-bottom: 1px dotted;
         color: #fff;
     font-family: 'Omnes-Semibold';
     font-size: 20px;
+    border-bottom: 1px dotted;
 }
 </style>
 
@@ -180,20 +181,21 @@ We use this data structure since it fix in the best way with the relationship be
 <div id="res">Node</div>
 <p>Each node has the information necessary to get a full description of it, using the relation with other nodes and its attributes.</p>
 <p>Node attributes:</p>
+<div style="margin-left:50px">
 <ul>
 	<li>Mandatory attributes:</li>
-	<ul><li>id, node identifier.</li>
+	<ul style="margin-left:50px"><li>id, node identifier.</li>
 	<li>name, main name of a node.</li>
 	<li>metrics, list with at least one metric object.</li>
 	</ul>
 	<li>Optional attributes:</li>
-	<ul><li>otherNames, list of synonyms for that node.</li>
+	<ul style="margin-left:50px"><li>otherNames, list of synonyms for that node.</li>
 	<li>is, list of node identifier.</li>
 	<li>has, list of has relation objects.</li>
 	<li>extras, extra information for that node.</li>
 	</ul>
 </ul>
-
+</div>
 
 <div id="res">Relation</div>
 <p>There are two types relations between nodes in the wikiGraph:</p>
@@ -201,14 +203,18 @@ We use this data structure since it fix in the best way with the relationship be
 
 
 <p>"HAS" Relation (aggregation):</p>
+<div style="margin-left:50px">
 <p>Use a "has relation" object to define if a node is part of another node.</p>
 <p>Example</p>
 <p>Apple Juice "has" Apple.</p>
+</div>
 
 <p>"IS" Relation (aggregation):</p>
+<div style="margin-left:50px">
 <p>Use "is" to define if a node is a child of another node.</p>
 <p>Example</p>
 <p>Apple "is a" Fruit.</p>
+</div>
 
 <div id="res">Metric</div>
 <p>Nodes defines its own way to be quantified using Metrics Objects, it is possible to use more 
@@ -261,47 +267,8 @@ than one metric per node.</p>
     "pageCount": 2,
     "itemsTotal": 30,
     "items": [
+	<div style="margin-left:50px">
 
-        {
-            "name": "Bladder cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258404,
-            "otherNames": "C67.9,Malignant neoplasm of bladder,Cancer of the bladder,Malignant Neoplasm Bladder Unspecified",
-            "type": "MetaNode",
-            "id": 33405
-        },
-        {
-            "name": "Brain cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258494,
-            "otherNames": "C71.9,Cancer of of central venous system,Brain neoplasm,Malignant neoplasm of brain,Cancer of brain,CNS cancer,Malignant Neoplasm Brain Unspecified",
-            "type": "MetaNode",
-            "id": 33423
-        },
-        {
-            "name": "Breast cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258215,
-            "otherNames": "C50.9,Cancer of the breast,Malignant neoplasm of breast,Malignant Neoplasm Breast Unspecified",
-            "type": "MetaNode",
-            "id": 33427
-        },
-        {
-            "name": "Cancer",
-            "parentIds": [
-                290
-            ],
-            "origId": 0,
-            "otherNames": "[]",
-            "type": "MetaNode",
-            "id": 3194
-        },
         {
             "name": "Cardiac cancer",
             "parentIds": [
@@ -383,76 +350,7 @@ than one metric per node.</p>
             "type": "MetaNode",
             "id": 33607
         },
-        {
-            "name": "Lung cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 257921,
-            "otherNames": "C34.9,Cancer of the lung,Malignant neoplasm of bronchus,Malignant neoplasm of lung,Malignant Neoplasm Bronchus Or Lung Unspecified",
-            "type": "MetaNode",
-            "id": 33431
-        },
-        {
-            "name": "Mouth cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 257519,
-            "otherNames": "C06.9,Malignant neoplasm of the mouth,Cancer of the oral mucosa,Cancer of the oral cavity,Oral cancer,Cancer of the mouth,Malignant Neoplasm Mouth Unspecified",
-            "type": "MetaNode",
-            "id": 33667
-        },
-        {
-            "name": "Oncologist Visit",
-            "parentIds": [
-                292
-            ],
-            "origId": 251141,
-            "otherNames": "oncologist visit, cancer",
-            "type": "MetaNode",
-            "id": 41710
-        },
-        {
-            "name": "Ovarian cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258278,
-            "otherNames": "C56,Malignant neoplasm of ovary,Ovarian carcinoma,Malignant Neoplasm Of Ovary",
-            "type": "MetaNode",
-            "id": 33781
-        },
-        {
-            "name": "Paget disease of the breast",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258191,
-            "otherNames": "C50.0,Paget disease of the niple,Skin cancer of the niple,Mammary Paget disease,Paget´s disease of the niple,Mammary Paget´s disease,Malignant Neoplasm Nipple And Areola",
-            "type": "MetaNode",
-            "id": 33675
-        },
-        {
-            "name": "Pancreatic cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 257831,
-            "otherNames": "C25.9,Malignant neoplasm of pancreas,Pancreatic neoplasms,Pancreatic carcinoma,Cancer of pancreas,Pancreas cancer,Malignant Neoplasm Pancreas Unspecified",
-            "type": "MetaNode",
-            "id": 33939
-        },
-        {
-            "name": "Pediatric Hematologist Oncologist Visit",
-            "parentIds": [
-                292
-            ],
-            "origId": 251159,
-            "otherNames": "pediatric hematologist oncologist visit, cancer children",
-            "type": "MetaNode",
-            "id": 41759
-        },
+
         {
             "name": "Peritoneal cancer",
             "parentIds": [
@@ -463,36 +361,7 @@ than one metric per node.</p>
             "type": "MetaNode",
             "id": 33971
         },
-        {
-            "name": "Prostate cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258329,
-            "otherNames": "C61,Cancer of prostate,Malignant neoplasm of prostate,Prostatic neoplasm,Prostatic cancer,Carcinoma of prostate,Prostate adenocarcinoma,Malignant Neoplasm Of Prostate",
-            "type": "MetaNode",
-            "id": 33797
-        },
-        {
-            "name": "Rectal cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 0,
-            "otherNames": "['C20', 'Cancer of rectum', 'Malignant neoplasm of rectum', 'Ca rectum', 'Rectum carcinoma', 'Malignant tumor of rectum', 'Rectal adenocarcinoma']",
-            "type": "MetaNode",
-            "id": 3225
-        },
-        {
-            "name": "Renal cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258365,
-            "otherNames": "C64,Malignant neoplasm of kidney,Kidney cancer,Renal cell carcinoma,RCC,Hypernephroma,Renal cell cancer,Malignant Neoplasm Of Kidney Except Renal Pelvis",
-            "type": "MetaNode",
-            "id": 33719
-        }
+	</div>
     ],
     "pageNext": "/search/?name=cancer&page=1",
     "itemsTo": 24,
