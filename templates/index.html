@@ -3,134 +3,144 @@
 
 <head>
 
-  <title>Wikilife | Meta API</title>
+<title>Wikilife | Meta API</title>
 
-  <!-- Metatags -->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=1024, initial-scale=1.0">
+<!-- Metatags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=1024, initial-scale=1.0">
 
-  <!-- Styles -->
-
-  
+<!-- Styles -->
 
 
-  	<script type="text/javascript" src="/static/js/shCore.js"></script>
-	<script type="text/javascript" src="/static/js/shBrushJScript.js"></script>
-	<link type="text/css" rel="stylesheet" href="/static/css/shCoreDefault.css"/>
-	<script type="text/javascript">SyntaxHighlighter.all();</script>
+<link href="http://datadonors.org/static/css/main.css" rel="stylesheet"
+	type="text/css" />
+
+<script type="text/javascript" src="/static/js/shCore.js"></script>
+<script type="text/javascript" src="/static/js/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet"
+	href="/static/css/shCoreDefault.css" />
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
 <style type="text/css">
 .learn-more {
-    background-color: #e46666;
-    position: relative;
+	background-color: #e46666;
+	position: relative;
 }
 
-ol, ul {
-    list-style: disc;
+ol,ul {
+	list-style: disc;
 }
+
 .plain_text .centered_container ul li {
-    color: #fff;
-    font-family: 'Omnes-Semibold';
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-}
-
-
-@font-face {
-    font-family: "Gotham-Ultra";
-    src: url('/static/css/fonts/gotham_ultra.eot');
-    src: url('/static/css/fonts/gotham_ultra.eot?#iefix') format('embedded-opentype'),
-    	 url('/static/css/fonts/gotham_ultra.svg#Gotham-Ultra') format('svg'),
-    	 url('/static/css/fonts/gotham_ultra.woff') format('woff'),
-    	 url('/static/css/fonts/gotham_ultra.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	color: #fff;
+	font-family: 'Omnes-Semibold';
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	padding-left: 10px;
 }
 
 @font-face {
-    font-family: 'gotham-bold';
-    src: url('/static/css/fonts/gotham-bold.eot');
-    src: url('/static/css/fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
-         url('/static/css/fonts/gotham-bold.woff') format('woff'),
-         url('/static/css/fonts/gotham-bold.ttf') format('truetype'),
-         url('/static/css/fonts/gotham-bold.svg#gotham-bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family: "Gotham-Ultra";
+	src: url('/static/css/fonts/gotham_ultra.eot');
+	src: url('/static/css/fonts/gotham_ultra.eot?#iefix')
+		format('embedded-opentype'),
+		url('/static/css/fonts/gotham_ultra.svg#Gotham-Ultra') format('svg'),
+		url('/static/css/fonts/gotham_ultra.woff') format('woff'),
+		url('/static/css/fonts/gotham_ultra.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
-@font-face {
-    font-family: 'Omnes-Semibold';
-    src: url('/static/css/fonts/Omnes-Semibold.eot');
-    src: url('/static/css/fonts/Omnes-Semibold.eot?#iefix') format('embedded-opentype'),
-         url('/static/css/fonts/Omnes-Semibold.woff') format('woff'),
-         url('/static/css/fonts/Omnes-Semibold.ttf') format('truetype'),
-         url('/static/css/fonts/Omnes-Semibold.svg#Omnes-Semibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
+@font-face {
+	font-family: 'gotham-bold';
+	src: url('/static/css/fonts/gotham-bold.eot');
+	src: url('/static/css/fonts/gotham-bold.eot?#iefix')
+		format('embedded-opentype'), url('/static/css/fonts/gotham-bold.woff')
+		format('woff'), url('/static/css/fonts/gotham-bold.ttf')
+		format('truetype'),
+		url('/static/css/fonts/gotham-bold.svg#gotham-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Omnes-Semibold';
+	src: url('/static/css/fonts/Omnes-Semibold.eot');
+	src: url('/static/css/fonts/Omnes-Semibold.eot?#iefix')
+		format('embedded-opentype'),
+		url('/static/css/fonts/Omnes-Semibold.woff') format('woff'),
+		url('/static/css/fonts/Omnes-Semibold.ttf') format('truetype'),
+		url('/static/css/fonts/Omnes-Semibold.svg#Omnes-Semibold')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Omnes-bold';
 	src: url('/static/css/fonts/omnes_bold.eot');
-	src: local('‚ò∫'), url('/static/css/fonts/omnes_bold.woff') format('woff'), url('/static/css/fonts/omnes_bold.ttf') format('truetype'), url('/static/css/fonts/omnes_bold.svg') format('svg');
+	src: local('‚ò∫'), url('/static/css/fonts/omnes_bold.woff')
+		format('woff'), url('/static/css/fonts/omnes_bold.ttf')
+		format('truetype'), url('/static/css/fonts/omnes_bold.svg')
+		format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 div.learn-more p {
-    font-size: 17px !important;
+	font-size: 17px !important;
 }
+
 .http-request {
-    background-color: #eee;
-    border: medium none;
-    font-family: Consolas,Monaco,monospace;
-    font-size: 16px;
-    overflow-x: auto;
-    white-space: pre;
-    word-wrap: normal;
+	background-color: #eee;
+	border: medium none;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 16px;
+	overflow-x: auto;
+	white-space: pre;
+	word-wrap: normal;
 }
 
 .syntaxhighlighter {
-    background-color: white !important;
-    height: 500px;
-    overflow: scroll !important;
+	background-color: white !important;
+	height: 500px;
+	overflow: scroll !important;
 }
 
-.short{
+.short {
 	height: 500px;
 	overflow: scroll !important;
 	font-size: 12px;
 }
 
-.shorter{
+.shorter {
 	height: 150px !important;
 	overflow: scroll !important;
 	font-size: 12px;
 }
 
-
-
 div.learn-more h3 {
-    font-size: 21px !important;
-    margin-bottom: 15px !important;
-    margin-left: 0px !important;
-    margin-top: 85px !important;
-}
-h3{
-border-bottom: 1px dotted;
+	font-size: 21px !important;
+	margin-bottom: 15px !important;
+	margin-left: 0px !important;
+	margin-top: 85px !important;
 }
 
-#res{
-    font-size: 21px !important;
-    margin-bottom: 15px !important;
-    margin-left: 0px !important;
-    margin-top: 85px !important;
-        color: #fff;
-    font-family: 'Omnes-Semibold';
-    font-size: 20px;
-    border-bottom: 1px dotted;
+h3 {
+	border-bottom: 1px dotted;
+}
+
+#res {
+	font-size: 21px !important;
+	margin-bottom: 15px !important;
+	margin-left: 0px !important;
+	margin-top: 85px !important;
+	color: #fff;
+	font-family: 'Omnes-Semibold';
+	font-size: 20px;
+	border-bottom: 1px dotted;
 }
 </style>
 
@@ -138,89 +148,104 @@ border-bottom: 1px dotted;
 
 <body>
 
-<div id="container">
+	<div id="container">
 
-  <!--header-->
-  <!--/header-->
+		<!--header-->
+		<!--/header-->
 
-  <div class="full_container plain_text learn-more">
+		<div class="full_container plain_text learn-more">
 
-    <div class="centered_container">
+			<div class="centered_container">
 
-      <h2> Wikilife Meta API</h2> 
-      <h3>REST Web Service Interface </h3>
+				<h2>Wikilife Meta API</h2>
+				<h3>REST Web Service Interface</h3>
 
-<p>The Wikilife Meta REST API allows you to query meta-data about life style variables.</p>
+				<p>The Wikilife Meta REST API allows you to query meta-data
+					about life style variables.</p>
 
-<p>Since the API is based on REST principles, it's very easy to write and test
-applications. You can use your browser to access URLs, and you can use pretty
-much any HTTP client in any programming language to interact with the API.</p>
-
-
-<h3>WikiGraph Concept</h3>
-<p>The wikilife Graph of meta data is a digraph or directed graph (more info about digraphs here). 
-We use this data structure since it fix in the best way with the relationship between nodes.</p>
-<div style="margin-left:50px">
-<ul>
-<li>Everything is a node that can be quantified.</li>
-<li>Object-like oriented model using multi hierarchy and aggregation concepts.</li>
-</ul>
-</div>
-<div id="res">Node</div>
-<p>Each node has the information necessary to get a full description of it, using the relation with other nodes and its attributes.</p>
-<p>Node attributes:</p>
-<div style="margin-left:50px">
-<ul>
-	<li>Mandatory attributes:</li>
-	<ul style="margin-left:50px"><li>id, node identifier.</li>
-	<li>name, main name of a node.</li>
-	<li>metrics, list with at least one metric object.</li>
-	</ul>
-	<li>Optional attributes:</li>
-	<ul style="margin-left:50px"><li>otherNames, list of synonyms for that node.</li>
-	<li>is, list of node identifier.</li>
-	<li>has, list of has relation objects.</li>
-	<li>extras, extra information for that node.</li>
-	</ul>
-</ul>
-</div>
-
-<div id="res">Relation</div>
-<p>There are two types relations between nodes in the wikiGraph:<br/>
-"is" relationship and "has" relationship.</p>
+				<p>Since the API is based on REST principles, it's very easy to
+					write and test applications. You can use your browser to access
+					URLs, and you can use pretty much any HTTP client in any
+					programming language to interact with the API.</p>
 
 
-<p>"HAS" Relation (aggregation):</p>
-<div style="margin-left:50px">
-<p>Use a "has relation" object to define if a node is part of another node.<br/>
-Example<br/>
->Apple Juice "has" Apple.</p>
-</div>
+				<h3>WikiGraph Concept</h3>
+				<p>The wikilife Graph of meta data is a digraph or directed
+					graph (more info about digraphs here). We use this data structure
+					since it fix in the best way with the relationship between nodes.</p>
+				<div style="margin-left: 50px">
+					<ul>
+						<li>Everything is a node that can be quantified.</li>
+						<li>Object-like oriented model using multi hierarchy and
+							aggregation concepts.</li>
+					</ul>
+				</div>
+				<div id="res">Node</div>
+				<p>Each node has the information necessary to get a full
+					description of it, using the relation with other nodes and its
+					attributes.</p>
+				<p>Node attributes:</p>
+				<div style="margin-left: 50px">
+					<ul>
+						<li>Mandatory attributes:</li>
+						<ul style="margin-left: 50px">
+							<li>id, node identifier.</li>
+							<li>name, main name of a node.</li>
+							<li>metrics, list with at least one metric object.</li>
+						</ul>
+						<li>Optional attributes:</li>
+						<ul style="margin-left: 50px">
+							<li>otherNames, list of synonyms for that node.</li>
+							<li>is, list of node identifier.</li>
+							<li>has, list of has relation objects.</li>
+							<li>extras, extra information for that node.</li>
+						</ul>
+					</ul>
+				</div>
 
-<p>"IS" Relation (aggregation):</p>
-<div style="margin-left:50px">
-<p>Use "is" to define if a node is a child of another node.<br/>
-Example<br/>
-Apple "is a" Fruit.</p>
-</div>
+				<div id="res">Relation</div>
+				<p>
+					There are two types relations between nodes in the wikiGraph:<br />
+					"is" relationship and "has" relationship.
+				</p>
 
-<div id="res">Metric</div>
-<p>Nodes defines its own way to be quantified using Metrics Objects, it is possible to use more 
-than one metric per node.</p>
 
-<h3 id="base-url">Base URL</h3>
+				<p>"HAS" Relation (aggregation):</p>
+				<div style="margin-left: 50px">
+					<p>
+						Use a "has relation" object to define if a node is part of another
+						node.<br /> Example<br /> >Apple Juice "has" Apple.
+					</p>
+				</div>
 
-<p>All URLs referenced in the documentation have the following base:</p>
+				<p>"IS" Relation (aggregation):</p>
+				<div style="margin-left: 50px">
+					<p>
+						Use "is" to define if a node is a child of another node.<br />
+						Example<br /> Apple "is a" Fruit.
+					</p>
+				</div>
 
-<pre class="http-request notranslate">http://meta.wikilife.org/
+				<div id="res">Metric</div>
+				<p>Nodes defines its own way to be quantified using Metrics
+					Objects, it is possible to use more than one metric per node.</p>
+
+				<h3 id="base-url">Base URL</h3>
+
+				<p>All URLs referenced in the documentation have the following
+					base:</p>
+
+				<pre class="http-request notranslate">http://meta.wikilife.org/
 </pre>
 
-<p>The Wikilife Meta REST API is open and free to be used for anyone.</p>
+				<p>The Wikilife Meta REST API is open and free to be used for
+					anyone.</p>
 
-<h3 id="base-url">Pagination</h3>
+				<h3 id="base-url">Pagination</h3>
 
-<p>All API results referenced in the documentation are paginated.</p>
-<pre class="http-request notranslate shorter brush: js;">
+				<p>All API results referenced in the documentation are
+					paginated.</p>
+				<pre class="http-request notranslate shorter brush: js;">
 "pageIndex": 0,
 "itemsCount": 25,
 "pageSize": 25,
@@ -231,20 +256,19 @@ than one metric per node.</p>
 "pagePrev": null,
 "itemsFrom": 0
 </pre>
-<h3>Resources</h3>
+				<h3>Resources</h3>
 
-<p>Read the API documentation for accessing each resource.</p>
+				<p>Read the API documentation for accessing each resource.</p>
 
 
-<div id="res"> Search meta</div>
-<p>Get all matches from the given parameter.</p>
+				<div id="res">Search meta</div>
+				<p>Get all matches from the given parameter.</p>
 
-<pre class="http-request notranslate">http://meta.wikilife.org/search/?name={nameParam}
-</pre>
+				<pre class="http-request notranslate">http://meta.wikilife.org/search/?name={nameParam}</pre>
 
-<p>Example</p>
-<p>http://meta.wikilife.org/search/?name=cancer</p>
-<pre class="brush: js;">
+				<p>Example</p>
+				<p>http://meta.wikilife.org/search/?name=cancer</p>
+				<pre class="brush: js;">
 
 {
 
@@ -330,15 +354,15 @@ than one metric per node.</p>
 </pre>
 
 
-<div id="res"> Node by ID</div>
-<p>Get the information for a given nodeId</p>
+				<div id="res">Node by ID</div>
+				<p>Get the information for a given nodeId</p>
 
-<pre class="http-request notranslate">http://meta.wikilife.org/nodes/{nodeID}
+				<pre class="http-request notranslate">http://meta.wikilife.org/nodes/{nodeID}
 </pre>
 
-<p>Example</p>
-<p>http://meta.wikilife.org/nodes/6</p>
-<pre class="http-request notranslate short brush: js;">
+				<p>Example</p>
+				<p>http://meta.wikilife.org/nodes/6</p>
+				<pre class="http-request notranslate short brush: js;">
 
 {
 
@@ -511,15 +535,16 @@ than one metric per node.</p>
 }
 </pre>
 
-<div id="res"> Metric by ID</div>
-<p>Get the information for a given metricId, it wiil return all nodes using that metric too.</p>
+				<div id="res">Metric by ID</div>
+				<p>Get the information for a given metricId, it wiil return all
+					nodes using that metric too.</p>
 
-<pre class="http-request notranslate">http://meta.wikilife.org/metrics/{metricID}
+				<pre class="http-request notranslate">http://meta.wikilife.org/metrics/{metricID}
 </pre>
 
-<p>Example</p>
-<p>http://meta.wikilife.org/metrics/394</p>
-<pre class="http-request notranslate short brush: js;">
+				<p>Example</p>
+				<p>http://meta.wikilife.org/metrics/394</p>
+				<pre class="http-request notranslate short brush: js;">
 {
     "name": "Calories Burned-Value Node",
     "min": 1,
@@ -593,50 +618,67 @@ than one metric per node.</p>
 }
 </pre>
 
-<h3 >About REST (REpresentational State Transfer)</h3>
+				<h3>About REST (REpresentational State Transfer)</h3>
 
-<p>We designed the Wikilfie Meta API in a very RESTful way, so that your consumption of it is simple and straightforward. From <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Wikipedia</a>:</p>
+				<p>
+					We designed the Wikilfie Meta API in a very RESTful way, so that
+					your consumption of it is simple and straightforward. From <a
+						href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Wikipedia</a>:
+				</p>
 
-<p>REST's proponents argue that the Web's scalability and growth are a direct result of a few key design principles:</p>
+				<p>REST's proponents argue that the Web's scalability and growth
+					are a direct result of a few key design principles:</p>
 
-<ul style="margin-left:50px">
-<li>Application state and functionality are divided into resources</li>
-<li>Every resource is uniquely addressable using a universal syntax for use in hypermedia links</li>
-<li>All resources share a uniform interface for the transfer of state between client and resource, consisting of
+				<ul style="margin-left: 50px">
+					<li>Application state and functionality are divided into
+						resources</li>
+					<li>Every resource is uniquely addressable using a universal
+						syntax for use in hypermedia links</li>
+					<li>All resources share a uniform interface for the transfer
+						of state between client and resource, consisting of
 
-<ul style="margin-left:50px">
-<li class="odd">A constrained set of well-defined operations</li>
-<li class="odd">A constrained set of content types, optionally supporting code on demand</li>
-</ul></li>
-<li>A protocol which is:
+						<ul style="margin-left: 50px">
+							<li class="odd">A constrained set of well-defined operations</li>
+							<li class="odd">A constrained set of content types,
+								optionally supporting code on demand</li>
+						</ul>
+					</li>
+					<li>A protocol which is:
 
-<ul style="margin-left:50px">
-<li class="odd">Client-server</li>
-<li class="odd">Stateless</li>
-<li class="odd">Cacheable</li>
-<li class="odd">Layered </li>
-</ul></li>
-</ul>
+						<ul style="margin-left: 50px">
+							<li class="odd">Client-server</li>
+							<li class="odd">Stateless</li>
+							<li class="odd">Cacheable</li>
+							<li class="odd">Layered</li>
+						</ul>
+					</li>
+				</ul>
 
-<p>REST's client/server separation of concerns simplifies component
-implementation, reduces the complexity of connector semantics, improves the
-effectiveness of performance tuning, and increases the scalability of pure
-server components. Layered system constraints allow intermediaries-proxies,
-gateways, and firewalls-to be introduced at various points in the communication
-without changing the interfaces between components, thus allowing them to
-assist in communication translation or improve performance via large-scale,
-shared caching.</p>
+				<p>REST's client/server separation of concerns simplifies
+					component implementation, reduces the complexity of connector
+					semantics, improves the effectiveness of performance tuning, and
+					increases the scalability of pure server components. Layered system
+					constraints allow intermediaries-proxies, gateways, and
+					firewalls-to be introduced at various points in the communication
+					without changing the interfaces between components, thus allowing
+					them to assist in communication translation or improve performance
+					via large-scale, shared caching.</p>
 
-<p>REST enables intermediate processing by constraining messages to be
-self-descriptive: interaction is stateless between requests, standard methods
-and media types are used to indicate semantics and exchange information, and
-responses explicitly indicate cacheability.</p>
+				<p>REST enables intermediate processing by constraining messages
+					to be self-descriptive: interaction is stateless between requests,
+					standard methods and media types are used to indicate semantics and
+					exchange information, and responses explicitly indicate
+					cacheability.</p>
 
-<p>If you're looking for more information about RESTful web services, the
-<a href="http://www.amazon.com/RESTful-Web-Services-Leonard-Richardson/dp/0596529260">O'Reilly RESTful Web Services book</a> is excellent.</p>
+				<p>
+					If you're looking for more information about RESTful web services,
+					the <a
+						href="http://www.amazon.com/RESTful-Web-Services-Leonard-Richardson/dp/0596529260">O'Reilly
+						RESTful Web Services book</a> is excellent.
+				</p>
 
-  </div>
-</div>
-</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
