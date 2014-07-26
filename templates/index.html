@@ -1,3 +1,4 @@
+{% autoescape None %}
 <!DOCTYPE html>
 <html>
 
@@ -127,18 +128,7 @@ pre {
 	overflow-x: auto;
 	white-space: pre;
 	word-wrap: normal;
-    background-color: #f5f5f5;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    display: block;
-    font-size: 12.025px;
-    line-height: 18px;
-    margin: 0 0 9px;
-    padding: 8.5px;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
-    color: #333;
+
 
 }
 
@@ -309,7 +299,7 @@ h3 {
 
 				<p>Example</p>
 				<p>http://meta.wikilife.org/search/?name=cancer</p>
-				<div class="http-request-code notranslate" ><code class="json">
+				<pre class="http-request-code notranslate" ><code class="json">
 {
     "pageIndex": 0,
     "itemsCount": 25,
@@ -361,7 +351,7 @@ h3 {
 
 }
 </code>
-</div>
+</pre>
 
 
 				<div id="res">Node by ID</div>
