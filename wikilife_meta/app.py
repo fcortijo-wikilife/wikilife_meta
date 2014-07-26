@@ -26,7 +26,8 @@ def setup_app(settings):
     services = _build_services(settings)
 
     """ VIEWS """
-    routes.append(('/', MainHandler, {'services': services}))
+    routes.append((r"/()$", tornado.web.StaticFileHandler, {'path':'templates/index.html'})),
+    #routes.append(('/', MainHandler, {'services': services}))
     routes.append(('/nodes/(?P<node_id>\d+)?', NodeByIdHandler, {'services': services}))
     routes.append(('/nodes_orig/(?P<node_orig_id>\d+)?', NodeByOrigIdHandler, {'services': services}))
     routes.append(('/metrics/(?P<metric_id>\d+)?', MetricByIdHandler, {'services': services}))
