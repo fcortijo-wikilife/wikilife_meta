@@ -5,6 +5,170 @@
 
 <title>Wikilife | Meta API</title>
 
+<!-- Metatags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=1024, initial-scale=1.0">
+
+<!-- Styles -->
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+<link href="http://datadonors.org/static/css/main.css" rel="stylesheet"
+	type="text/css" />
+
+<script type="text/javascript" src="/static/js/shCore.js"></script>
+<script type="text/javascript" src="/static/js/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet"
+	href="/static/css/shCoreDefault.css" />
+<!-- script type="text/javascript">
+	SyntaxHighlighter.all();
+</script-->
+<script>hljs.initHighlightingOnLoad();</script>
+<style type="text/css">
+.learn-more {
+	background-color: #e46666;
+	position: relative;
+}
+
+ol,ul {
+	list-style: disc;
+}
+
+.plain_text .centered_container ul li {
+	color: #fff;
+	font-family: 'Omnes-Semibold';
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+@font-face {
+	font-family: "Gotham-Ultra";
+	src: url('/static/css/fonts/gotham_ultra.eot');
+	src: url('/static/css/fonts/gotham_ultra.eot?#iefix')
+		format('embedded-opentype'),
+		url('/static/css/fonts/gotham_ultra.svg#Gotham-Ultra') format('svg'),
+		url('/static/css/fonts/gotham_ultra.woff') format('woff'),
+		url('/static/css/fonts/gotham_ultra.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'gotham-bold';
+	src: url('/static/css/fonts/gotham-bold.eot');
+	src: url('/static/css/fonts/gotham-bold.eot?#iefix')
+		format('embedded-opentype'), url('/static/css/fonts/gotham-bold.woff')
+		format('woff'), url('/static/css/fonts/gotham-bold.ttf')
+		format('truetype'),
+		url('/static/css/fonts/gotham-bold.svg#gotham-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Omnes-Semibold';
+	src: url('/static/css/fonts/Omnes-Semibold.eot');
+	src: url('/static/css/fonts/Omnes-Semibold.eot?#iefix')
+		format('embedded-opentype'),
+		url('/static/css/fonts/Omnes-Semibold.woff') format('woff'),
+		url('/static/css/fonts/Omnes-Semibold.ttf') format('truetype'),
+		url('/static/css/fonts/Omnes-Semibold.svg#Omnes-Semibold')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Omnes-bold';
+	src: url('/static/css/fonts/omnes_bold.eot');
+	src: local('‚ò∫'), url('/static/css/fonts/omnes_bold.woff')
+		format('woff'), url('/static/css/fonts/omnes_bold.ttf')
+		format('truetype'), url('/static/css/fonts/omnes_bold.svg')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+div.learn-more p {
+	font-size: 17px !important;
+}
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: block;
+    font-size: 12.025px;
+    line-height: 18px;
+    margin: 0 0 9px;
+    padding: 8.5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+}
+.http-request {
+	background-color: #eee;
+	border: medium none;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 16px;
+	overflow-x: auto;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+.http-request-code {
+	background-color: #eee;
+	border: medium none;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	overflow-x: auto;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+.syntaxhighlighter {
+	background-color: white !important;
+	height: 500px;
+	overflow: scroll !important;
+}
+
+.short {
+	height: 500px;
+	overflow: scroll !important;
+	font-size: 12px;
+}
+
+.shorter {
+	height: 150px !important;
+	overflow: scroll !important;
+	font-size: 12px;
+}
+
+div.learn-more h3 {
+	font-size: 21px !important;
+	margin-bottom: 15px !important;
+	margin-left: 0px !important;
+	margin-top: 85px !important;
+}
+
+h3 {
+	border-bottom: 1px dotted;
+}
+
+#res {
+	font-size: 21px !important;
+	margin-bottom: 15px !important;
+	margin-left: 0px !important;
+	margin-top: 85px !important;
+	color: #fff;
+	font-family: 'Omnes-Semibold';
+	font-size: 20px;
+	border-bottom: 1px dotted;
+}
+</style>
+
 </head>
 
 <body>
