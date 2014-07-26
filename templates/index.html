@@ -118,6 +118,16 @@ pre {
 	word-wrap: normal;
 }
 
+.http-request-code {
+	background-color: #eee;
+	border: medium none;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	overflow-x: auto;
+	white-space: pre;
+	word-wrap: normal;
+}
+
 .syntaxhighlighter {
 	background-color: white !important;
 	height: 500px;
@@ -195,7 +205,7 @@ h3 {
 							aggregation concepts.</li>
 					</ul>
 				</div>
-				<div id="res">Node</div>
+				<div id="res">NODE</div>
 				<p>Each node has the information necessary to get a full
 					description of it, using the relation with other nodes and its
 					attributes.</p>
@@ -218,7 +228,7 @@ h3 {
 					</ul>
 				</div>
 
-				<div id="res">Relation</div>
+				<div id="res">RELATION</div>
 				<p>
 					There are two types relations between nodes in the wikiGraph:<br />
 					"is" relationship and "has" relationship.
@@ -229,7 +239,7 @@ h3 {
 				<div style="margin-left: 50px">
 					<p>
 						Use a "has relation" object to define if a node is part of another
-						node.<br /> Example<br /> >Apple Juice "has" Apple.
+						node.<br /> Example<br />Apple Juice "has" Apple.
 					</p>
 				</div>
 
@@ -241,7 +251,7 @@ h3 {
 					</p>
 				</div>
 
-				<div id="res">Metric</div>
+				<div id="res">METRIC</div>
 				<p>Nodes defines its own way to be quantified using Metrics
 					Objects, it is possible to use more than one metric per node.</p>
 
@@ -260,7 +270,7 @@ h3 {
 
 				<p>All API results referenced in the documentation are
 					paginated.</p>
-				<pre class="http-request notranslate shorter brush: js;">
+				<pre class="http-request-code notranslate"><code class="json">{
 "pageIndex": 0,
 "itemsCount": 25,
 "pageSize": 25,
@@ -270,8 +280,10 @@ h3 {
 "itemsTo": 24,
 "pagePrev": null,
 "itemsFrom": 0
+}
+</code>
 </pre>
-				<h3>Resources</h3>
+				<h3>RESOURCES</h3>
 
 				<p>Read the API documentation for accessing each resource.</p>
 
@@ -283,10 +295,8 @@ h3 {
 
 				<p>Example</p>
 				<p>http://meta.wikilife.org/search/?name=cancer</p>
-				<pre class="http-request notranslate" ><code class="json">
-
+				<pre class="http-request-code notranslate" ><code class="json">
 {
-
     "pageIndex": 0,
     "itemsCount": 25,
     "name": "cancer",
@@ -305,7 +315,7 @@ h3 {
                 3194
             ],
             "origId": 257930,
-            "otherNames": "C38.0,Malignant neoplasm of heart,Cardiac sarcoma,Heart cancer,Cancer of the heart,Malignant Neoplasm Heart",
+            "otherNames": "C38.0,Malignant neoplasm of heart,Cardiac sarcoma,Heart cancer"
             "type": "MetaNode",
             "id": 33557
         },
@@ -315,7 +325,7 @@ h3 {
                 3194
             ],
             "origId": 258251,
-            "otherNames": "C53.9,Malignant neoplasm of cervix uteri,cancer of the uterine cervix,carcinoma of the uterine cervix,Cervical carcinoma,Malignant Neoplasm Cervix Uteri Unspecified",
+            "otherNames": "C53.9,Malignant neoplasm of cervix uteri,cancer of the uterine cervix",
             "type": "MetaNode",
             "id": 33455
         },
@@ -330,37 +340,7 @@ h3 {
             "type": "MetaNode",
             "id": 41624
         },
-        {
-            "name": "Head and neck cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258569,
-            "otherNames": "C76.0,Cancer of head,face and neck,Malignant Neoplasm Of Other And Ill Defined Sites Head Face And Neck",
-            "type": "MetaNode",
-            "id": 33745
-        },
-        {
-            "name": "Liver cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 257786,
-            "otherNames": "C22.9,Cancer of the liver,Malignant neoplasm of liver,Hepatic cancer,Carcinoma of liver,Hepatocellular carcinoma,Malignant Neoplasm Liver Unspecified",
-            "type": "MetaNode",
-            "id": 33607
-        },
-
-        {
-            "name": "Peritoneal cancer",
-            "parentIds": [
-                3194
-            ],
-            "origId": 258152,
-            "otherNames": "C48.2,Malignant neoplasm of peritoneum,neoplasm of parietal peritoneum,Malignant Neoplasm Peritoneum Unspecified",
-            "type": "MetaNode",
-            "id": 33971
-        },
+       ...
 
     ],
 
@@ -378,7 +358,7 @@ h3 {
 
 				<p>Example</p>
 				<p>http://meta.wikilife.org/nodes/6</p>
-				<pre class="http-request notranslate short brush: js;">
+				<pre class="http-request-code notranslate"><code class="json">
 
 {
 
@@ -406,14 +386,7 @@ h3 {
             "id": 396,
             "unit": ""
         },
-        {
-            "name": "With?-Value Node",
-            "default": 3,
-            "origId": 432,
-            "id": 9,
-            "type": "TextMetricNode",
-            "options": "Personal Trainner,Coach,Class Mates,Alone,Life Partner,Boyfriend,Girlfriend,Pet,Family,Friends,Coworker"
-        },
+
         {
             "name": "Where?-Value Node",
             "default": 0,
@@ -422,14 +395,7 @@ h3 {
             "type": "TextMetricNode",
             "options": "Home,Outdoors,Country Club,Gym"
         },
-        {
-            "name": "How Do You Feel?-Value Node",
-            "default": 5,
-            "origId": 436,
-            "id": 7,
-            "type": "TextMetricNode",
-            "options": "Energetic,Happy,Sad,Moody,Exhausted,Well Enough,Tired But Happy,Still Stressed,Unhappy"
-        }
+
     ],
     "origId": 49,
     "children": {
@@ -454,79 +420,7 @@ h3 {
                 "id": 412,
                 "name": "Athletics"
             },
-
-            {
-                "otherNames": "Brazilian Jiu Jitsu, BJJ, martial arts",
-                "origId": 401458,
-                "type": "MetaNode",
-                "id": 473,
-                "name": "Brazilian Jiu Jitsu"
-            },
-            {
-                "otherNames": "climbing",
-                "origId": 116,
-                "type": "MetaNode",
-                "id": 489,
-                "name": "Climbing"
-            },
-            {
-                "otherNames": "Coaching: basketball",
-                "origId": 406799,
-                "type": "MetaNode",
-                "id": 494,
-                "name": "Coaching Basketball"
-            },
-            {
-                "otherNames": "Coaching: football",
-                "origId": 406792,
-                "type": "MetaNode",
-                "id": 498,
-                "name": "Coaching Football"
-            },
-            {
-                "otherNames": "Coaching: soccer",
-                "origId": 406806,
-                "type": "MetaNode",
-                "id": 502,
-                "name": "Coaching Soccer"
-            },
-
-            {
-                "otherNames": "diving",
-                "origId": 141,
-                "type": "MetaNode",
-                "id": 555,
-                "name": "Diving"
-            },
-            {
-                "otherNames": "downhill, skiing",
-                "origId": 250026,
-                "type": "MetaNode",
-                "id": 559,
-                "name": "Downhill Skiing"
-            },
-            {
-                "otherNames": "elliptical",
-                "origId": 250020,
-                "type": "MetaNode",
-                "id": 564,
-                "name": "Elliptical"
-            },
-            {
-                "otherNames": "exercise - runkeeper - other, runkeeper",
-                "origId": 435596,
-                "type": "MetaNode",
-                "id": 569,
-                "name": "Exercise - Runkeeper - Other"
-            },
-            {
-                "otherNames": "fencing",
-                "origId": 161,
-                "type": "MetaNode",
-                "id": 572,
-                "name": "Fencing"
-            },
-
+			...
         ],
         "pageNext": "/nodes/6?children_page=1",
         "itemsTo": 49,
@@ -549,6 +443,7 @@ h3 {
     ]
 
 }
+</code>
 </pre>
 
 				<div id="res">Metric by ID</div>
@@ -560,7 +455,7 @@ h3 {
 
 				<p>Example</p>
 				<p>http://meta.wikilife.org/metrics/394</p>
-				<pre class="http-request notranslate short brush: js;">
+				<pre class="http-request-code notranslate"><code class="json">
 {
     "name": "Calories Burned-Value Node",
     "min": 1,
@@ -632,6 +527,7 @@ h3 {
 
 
 }
+</code>
 </pre>
 
 				<h3>About REST (REpresentational State Transfer)</h3>
