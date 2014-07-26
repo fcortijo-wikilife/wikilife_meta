@@ -1,5 +1,6 @@
 # coding=utf-8
 
+import tornado
 from tornado.web import Application
 from wikilife_meta.view.view_handlers import NodeByIdHandler, MainHandler, \
     MetricByIdHandler, SearchHandler, DescendantsHandler, NodeByOrigIdHandler,\
